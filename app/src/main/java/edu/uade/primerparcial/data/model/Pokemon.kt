@@ -1,12 +1,9 @@
 package edu.uade.primerparcial.data.model
 
 data class Pokemon(
-    val name: String,
-    val url: String
+    val id: Int,
+    val name: String
 ) {
-    val id: Int
-        get() = url.trimEnd('/').substringAfterLast('/').toIntOrNull() ?: 0
-
     val spriteUrl: String
         get() = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$id.png"
 
